@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div>
+                <h1>swapping of two inputs</h1>
+            </div>
+            <div>
+                <label for="t1">VALUE 1</label>
+                <input type="text" id="t1" placeholder="enter the value">
+
+            </div>
+            <div>
+                <label for="t2">VALUE 2</label>
+                <input type="text" id="t2" placeholder="enter the value">
+
+            </div>
+            <div>
+                <button onclick="swap()">
+                    swap
+                </button>
+            </div>
+            <div>
+                <p id="p1" style="background-color: yellow;"></p>
+
+            </div>
+            <div>
+                <p id="p2" style="background-color: yellow;"></p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script>
+
+        var a = document.getElementById("t1");
+        var b = document.getElementById("t2");
+        var c;
+
+
+        function swap() {
+
+            c = a;
+            a = b;
+            b = c
+
+            document.getElementById("p1").innerHTML = "value 1 is now:-" + a.value;
+            document.getElementById("p2").innerHTML = "value 2 is now:-" + b.value;
+
+        }
+
+    </script>
+</body>
+
+</html>
